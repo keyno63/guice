@@ -44,6 +44,9 @@ jobs:
 
   publish:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: [8, 11, 15]
     needs: test
     if: ${{ github.event_name == 'push' }}
     name: Publish Javadoc and Snapshot
