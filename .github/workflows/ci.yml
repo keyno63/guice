@@ -44,9 +44,9 @@ jobs:
 
   publishtest:
     runs-on: ubuntu-latest
-#    strategy:
-#      matrix:
-#        java: [8, 11, 15]
+    strategy:
+      matrix:
+        java: [8, 11, 15]
     needs: test
     name: Publish Javadoc and Snapshot Test
     steps:
